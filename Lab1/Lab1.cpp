@@ -10,7 +10,7 @@
 using namespace std;
 
 int main() {
-	cout << "Hi, A and B ! \n";
+	cout << "Hello, Bikram Karki ! \n";
 	cout << "My name is Anthony Arnold. Nice to meet you. \n";
 	cout << "\\|/ ____ \\|/ \n";
 	cout << " @~/ ,. \\~@ \n";
@@ -33,23 +33,26 @@ int main() {
 	cout << "Enter the amount recieved: $ ";
 	cin >> amtrecive;
 
+	cout << "The change is: \n";
+
 	int change = (amtrecive - amtdue)*100;
 	int dollars = change / DOLLARS;
-	cout << fixed <<setw(15) <<"Dollars: " << dollars << endl;
+	cout <<"Dollars: " << setw(15)<< dollars << endl;
 
 	int quarters = ((change - (dollars*DOLLARS)) / QUARTERS);
-	cout << setw(15)<<"Quarters: " << quarters << endl;
+	cout <<"Quarters: " << setw(14) << quarters << endl;
 	change = change - (dollars * DOLLARS) - (quarters * QUARTERS);
 
 	int dimes = change / DIMES;
-	cout << setw(15)<<"Dimes: " << dimes << endl;
+	cout <<"Dimes: " << setw(17) << dimes << endl;
 	change = change - (dimes * DIMES);
 
 	int nickels = change / NICKELS;
-	cout << setw(15)<<"Nickels: " << nickels << endl;
+	cout <<"Nickels: " << setw(15) << nickels << endl;
 	change = change - (nickels * NICKELS);
 
 	int pennies = change / PENNIES;
-	cout << setw(15)<<"Pennies: " << pennies << endl;
+	cout << "Pennies: "<< setw(15) << pennies << endl;
+	
 	return 0;
 }
